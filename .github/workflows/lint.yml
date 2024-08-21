@@ -1,0 +1,30 @@
+name: Lint and Format Check
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  lint_and_format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js Environment
+        uses: pnpm/action-setup@v4
+        with:
+          version: '9'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint Code with ESLint
+        run: pnpm run lint
+
+      - name: Check Code Formatting with Prettier
+        run: pnpm run format
