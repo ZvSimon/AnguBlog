@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Node.js Environment
-        uses: pnpm/setup-node@v4
+        uses: pnpm/action-setup@v4
         with:
           version: '9'
 
