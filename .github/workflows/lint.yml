@@ -11,23 +11,25 @@ on:
       - develop
 
 jobs:
-  lint:
+  lint_and_format:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          node-version: '20'
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Set up Node.js Environment
+        uses: pnpm/setup-node@v4
+        with:
+          version: '9'
 
-      - name: Run ESLint
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint Code with ESLint
         run: pnpm run lint
 
-      - name: Run Prettier Check
+      - name: Check Code Formatting with Prettier
         run: pnpm run prettier --check "src/**/*.{ts,html,css,scss}"
