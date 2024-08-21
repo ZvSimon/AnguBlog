@@ -32,4 +32,4 @@ jobs:
         run: pnpm run lint
 
       - name: Check Code Formatting with Prettier
-        run: prettier --write "src/**/*.{ts,html,css,scss}"
+        run: pnpm run format:check
