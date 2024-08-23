@@ -32,6 +32,9 @@ importers:
       '@angular/router':
         specifier: ^18.2.0
         version: 18.2.0(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.0(@angular/animations@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1)
+      primeicons:
+        specifier: ^7.0.0
+        version: 7.0.0
       primeng:
         specifier: ^17.18.9
         version: 17.18.9(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(@angular/forms@18.2.0(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.0(@angular/animations@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1))(rxjs@7.8.1)(zone.js@0.14.10)
@@ -3746,6 +3749,9 @@ packages:
     resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
     hasBin: true
+
+  primeicons@7.0.0:
+    resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
 
   primeng@17.18.9:
     resolution: {integrity: sha512-1FT0B8wtgvs/joduB1DDOLe2IsP1pegOiEfSPAHSbc6otgNx/6iLR0k2M/xr2c9Ur1aC7tAikkVfH3FGpWof3w==}
@@ -8587,6 +8593,8 @@ snapshots:
       fast-diff: 1.3.0
 
   prettier@3.3.3: {}
+
+  primeicons@7.0.0: {}
 
   primeng@17.18.9(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(@angular/forms@18.2.0(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.0(@angular/animations@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.0(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.0(rxjs@7.8.1)(zone.js@0.14.10)))(rxjs@7.8.1))(rxjs@7.8.1)(zone.js@0.14.10):
     dependencies:
