@@ -1,0 +1,33 @@
+.btn-heart {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  border-radius: 50%; /* Makes the button perfectly round */
+}
+
+.btn-heart:hover {
+  transform: scale(1.1);
+  background-color: #ff4d4d; /* Slightly brighter color on hover */
+}
+
+.btn-heart:active {
+  background-color: #ff1a1a; /* Even more pronounced color on click */
+}
+
+.btn-details,
+.btn-save {
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-details:hover,
+.btn-save:hover {
+  background-color: #006400; /* Darker shade on hover */
+}
+
+.btn-save:active {
+  background-color: #004d00; /* Darker color on click */
+}
