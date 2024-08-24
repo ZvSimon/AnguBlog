@@ -13,7 +13,7 @@
       ratione quam perferendis esse, cupiditate neque quas!
     </p>
     <ng-template pTemplate="footer">
-      <div class="flex gap-3 mt-1">
+      <div class="card-footer flex justify-content-between">
         <p-button label="More details" [raised]="true" severity="success" class="btn-details" />
         <p-button
           label="Save"
@@ -21,13 +21,13 @@
           icon="pi pi-bookmark"
           class="btn-save"
         />
+        <p-button
+          severity="danger"
+          [icon]="isFavorited ? 'pi pi-heart-fill' : 'pi pi-heart'"
+          class="btn-heart"
+          (click)="onHeartClick()"
+        ></p-button>
       </div>
-      <p-button
-        severity="danger"
-        [icon]="isFavorited ? 'pi pi-heart-fill' : 'pi pi-heart'"
-        class="btn-heart"
-        (click)="onHeartClick()"
-      ></p-button>
     </ng-template>
   </p-card>
 </div>
