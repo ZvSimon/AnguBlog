@@ -1,4 +1,4 @@
-.center-card {
+.center{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.center-card app-card {
+.center app-card {
   max-width: 600px;
   width: 100%;
 }
