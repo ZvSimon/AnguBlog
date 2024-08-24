@@ -1,26 +1,25 @@
-FROM node:20-slim AS build
-
+FROM node:20-slim AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-
-RUN corepack enable
-
+RUN corepack enable && corepack prepare pnpm@9.8.0 --activate
+COPY . /app
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml angular.json tsconfig.json tsconfig.app.json ./
-COPY src ./src
 
-RUN pnpm install
+FROM base AS deps
+RUN pnpm install --frozen-lockfile
 
-RUN pnpm run build
+FROM base AS dev
+COPY --from=deps /app/node_modules /app/node_modules
+CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--poll", "2000"]
 
-FROM node:20-slim
+FROM base AS prod-deps
+RUN pnpm install --prod --frozen-lockfile
 
-WORKDIR /app
+FROM deps AS build
+RUN pnpm build
 
+FROM base AS prod
+COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=build /app/dist /app/dist
-COPY --from=build /app/node_modules /app/node_modules
 
-EXPOSE 8000
-
-CMD [ "pnpm", "start" ]

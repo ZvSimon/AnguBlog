@@ -7,6 +7,7 @@ export const headerData = {
     {
       label: 'Github Repo',
       icon: 'pi pi-star',
+      url: 'https://github.com/ZvSimon/AnguBlog',
     },
     {
       label: 'Blogs',
