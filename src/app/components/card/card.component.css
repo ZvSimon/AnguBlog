@@ -1,11 +1,19 @@
-.card-container {
-  gap: 1rem;
-  width: 20%;
-  margin: 0 auto;
+p-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* Remove the height constraint to allow the card to size naturally */
+  max-width: 400px; /* Set a maximum width for the card */
+  width: 100%; /* Ensure the card scales to the container's width */
+  margin: 0 auto; /* Center the card within its container */
 }
 
-.custom-card {
-  position: relative;
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  margin-top: auto;
 }
 
 .btn-heart {
@@ -26,14 +34,18 @@
   background-color: #ff1a1a;
 }
 
-.btn-details {
-  margin-left: 0.3rem; /* Style moved from inline to CSS */
-}
-
+.btn-details,
 .btn-save {
-  margin-left: 0.3rem; /* Style moved from inline to CSS */
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.btn-heart {
-  margin-left: 0.3rem; /* Style moved from inline to CSS */
+.btn-details:hover,
+.btn-save:hover {
+  background-color: #006400;
+}
+
+.btn-save:active {
+  background-color: #004d00;
 }
