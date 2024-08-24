@@ -1,14 +1,27 @@
+html, body {
+  height: 100%; /* Assure que le body et l'html prennent toute la hauteur */
+  margin: 0; /* Supprime les marges par défaut */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .center-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  padding: 1rem; /* Adds padding for smaller screens */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.center-card app-card {
+  max-width: 600px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .center-card app-card {
-    width: 100%; /* Makes the card full-width on smaller screens */
-    max-width: 80%; /* Adds some margin on the sides */
+    display: flex;
+    justify-content: center; /* Ajoute une marge sur les côtés */
   }
 }

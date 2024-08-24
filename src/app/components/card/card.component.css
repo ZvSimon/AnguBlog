@@ -1,8 +1,9 @@
 p-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+
 }
 
 .card-footer {
@@ -10,7 +11,7 @@ p-card {
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  margin-top: auto; /* Assure que le footer reste en bas */
+  margin-top: auto;
 }
 
 .btn-heart {
