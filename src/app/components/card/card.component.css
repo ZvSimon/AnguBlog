@@ -38,10 +38,10 @@ p-card {
     box-shadow 0.2s ease;
 }
 
-.btn-details:hover,
-.btn-save:hover {
+.btn-details:hover{
   background-color: #006400;
 }
+
 
 .btn-save:active {
   background-color: #004d00;
