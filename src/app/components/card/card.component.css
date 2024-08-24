@@ -1,33 +1,36 @@
+.card-container{
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.custom-card {
+  position: relative;
+}
+
 .btn-heart {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
-  border-radius: 50%; /* Makes the button perfectly round */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  border-radius: 50%;
 }
 
 .btn-heart:hover {
   transform: scale(1.1);
-  background-color: #ff4d4d; /* Slightly brighter color on hover */
+  background-color: #ff4d4d;
 }
 
 .btn-heart:active {
-  background-color: #ff1a1a; /* Even more pronounced color on click */
+  background-color: #ff1a1a;
 }
 
-.btn-details,
+.btn-details  {
+  margin-left: 0.3rem; /* Style moved from inline to CSS */
+}
+
 .btn-save {
-  transition:
-    background-color 0.2s ease,
-    box-shadow 0.2s ease;
+  margin-left: 0.3rem; /* Style moved from inline to CSS */
 }
 
-.btn-details:hover,
-.btn-save:hover {
-  background-color: #006400; /* Darker shade on hover */
-}
-
-.btn-save:active {
-  background-color: #004d00; /* Darker color on click */
+.btn-heart{
+  margin-left: 0.3rem; /* Style moved from inline to CSS */
 }

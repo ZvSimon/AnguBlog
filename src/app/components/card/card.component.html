@@ -1,33 +1,26 @@
-<div class="card flex justify-content-center">
-  <p-card
-    header="Advanced Card"
-    subheader="Card Subheader"
-    [style]="{ width: '360px', position: 'relative' }"
-  >
-    <ng-template pTemplate="header">
-      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
-    </ng-template>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-      repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa
-      ratione quam perferendis esse, cupiditate neque quas!
-    </p>
-    <ng-template pTemplate="footer">
-      <div class="flex gap-3 mt-1">
-        <p-button label="More details" [raised]="true" severity="success" class="btn-details" />
-        <p-button
-          label="Save"
-          [style]="{ 'margin-left': '0.3rem' }"
-          icon="pi pi-bookmark"
-          class="btn-save"
-        />
-      </div>
-      <p-button
-        severity="danger"
-        [icon]="isFavorited ? 'pi pi-heart-fill' : 'pi pi-heart'"
-        class="btn-heart"
-        (click)="onHeartClick()"
-      ></p-button>
-    </ng-template>
-  </p-card>
+<div class="card-container">
+  <div class="card flex justify-content-center">
+    <p-card header="Advanced Card" subheader="Card Subheader" class="custom-card">
+      <ng-template pTemplate="header">
+        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+      </ng-template>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+        repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa
+        ratione quam perferendis esse, cupiditate neque quas!
+      </p>
+      <ng-template pTemplate="footer">
+        <div class="card-footer flex justify-content-between">
+          <p-button label="More details" [raised]="true" severity="success" class="btn-details"></p-button>
+          <p-button label="Save" icon="pi pi-bookmark" class="btn-save"></p-button>
+          <p-button
+            severity="danger"
+            [icon]="isFavorited ? 'pi pi-heart-fill' : 'pi pi-heart'"
+            class="btn-heart"
+            (click)="onHeartClick()"
+          ></p-button>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
 </div>
