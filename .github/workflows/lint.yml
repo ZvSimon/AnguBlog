@@ -17,8 +17,6 @@ jobs:
 
       - name: Set up Node.js Environment
         uses: pnpm/action-setup@v4
-        with:
-          version: '9'
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile

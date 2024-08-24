@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "8000:4200"
+    volumes:
+        - .:/app
+        - /app/node_modules
+    environment:
+      - NODE_ENV=development
+# TODO add database service
