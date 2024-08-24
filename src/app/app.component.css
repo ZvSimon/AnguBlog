@@ -1,11 +1,3 @@
-html, body {
-  height: 100%; /* Assure que le body et l'html prennent toute la hauteur */
-  margin: 0; /* Supprime les marges par défaut */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .center-card {
   display: flex;
   justify-content: center;
@@ -22,6 +14,6 @@ html, body {
 @media (max-width: 768px) {
   .center-card app-card {
     display: flex;
-    justify-content: center; /* Ajoute une marge sur les côtés */
+    justify-content: center;
   }
 }
