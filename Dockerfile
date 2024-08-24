@@ -1,29 +1,25 @@
-# Stage 1: Build the Angular application
-FROM node:18-alpine AS build
-
-# Set the working directory inside the container
+FROM node:20-slim AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable && corepack prepare pnpm@9.8.0 --activate
+COPY . /app
 WORKDIR /app
 
-# Copy the package.json and pnpm-lock.yaml files
-COPY package.json pnpm-lock.yaml ./
 
-# Install dependencies
-RUN npm install -g pnpm && pnpm install
+FROM base AS deps
+RUN pnpm install --frozen-lockfile
 
-# Copy the rest of the application code
-COPY . .
+FROM base AS dev
+COPY --from=deps /app/node_modules /app/node_modules
+CMD ["npx", "ng", "serve", "--host", "0.0.0.0", "--poll", "2000"]
 
-# Build the Angular application
+FROM base AS prod-deps
+RUN pnpm install --prod --frozen-lockfile
+
+FROM deps AS build
 RUN pnpm build
 
-# Stage 2: Serve the Angular application with Nginx
-FROM nginx:stable-alpine
-
-# Copy the build output to the Nginx HTML directory
-COPY --from=build /app/dist/angu-blog /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-# Start the Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+FROM base AS prod
+COPY --from=prod-deps /app/node_modules /app/node_modules
+COPY --from=build /app/dist /app/dist
+# serve the app

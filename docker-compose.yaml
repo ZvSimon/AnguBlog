@@ -1,0 +1,11 @@
+services:
+  app:
+    # build dev step
+    build:
+      context: .
+      target: prod
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=production
+# TODO serve the app with a web server and add database service
