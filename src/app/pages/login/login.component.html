@@ -4,7 +4,9 @@
       <img src="assets/logo.png" alt="Description de l'image">
     </div>
   </div>
-  <h1 style = "background-color: var(--primary-color">Sign in</h1>
+  <p class="welcome-message">Welcome back to WorldBlog !</p>
+
+  <h1 class="title">Sign in</h1>
   <div class="input">
     <p-floatLabel>
       <input type="text" pInputText formControlName="email" />
@@ -13,7 +15,7 @@
   </div>
   <div class="input">
     <p-floatLabel>
-      <p-password  formControlName="password">
+      <p-password  formControlName="password" >
         <ng-template pTemplate="header">
           <h6>Pick a password</h6>
         </ng-template>
@@ -33,5 +35,14 @@
   </div>
   <div class="button">
     <button pButton type="submit" label="Login" [disabled]="!loginForm.valid"></button>
+  </div>
+  <p-divider layout="horizontal" styleClass="flex md:hidden" [align]="'center'">
+    <b>OR</b>
+  </p-divider>
+  <div class="button-login-other">
+    <button pButton type="button" label="Sign in with Google" icon="pi pi-google" style="width: 100%" class="button-google"></button>
+  </div>
+  <div class="button-login-other">
+    <button pButton type="button" label="Sign in with Google" icon="pi pi-github" style="width: 100%" class="button-github" ></button>
   </div>
 </form>
