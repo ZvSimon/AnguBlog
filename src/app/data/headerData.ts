@@ -2,7 +2,8 @@ export const headerData = {
   items: [
     {
       label: 'Home',
-      icon: 'pi pi-home',
+      url: '/',
+      template:'logoTemplate'
     },
     {
       label: 'Github Repo',
