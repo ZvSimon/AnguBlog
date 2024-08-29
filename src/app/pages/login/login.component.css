@@ -181,4 +181,16 @@ button[disabled] {
 }
 
 .button-github:hover {
-  b
+  background-color: #24292e ;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) ;
+}
+
+.button-github:active {
+  background-color: #1b1f23 ;
+  box-shadow: none ;
+}
+
+.button-github:focus {
+  outline: none ;
+  box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.4) ;
+}
